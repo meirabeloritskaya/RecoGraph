@@ -5,6 +5,9 @@ class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)
     image = models.ImageField(upload_to='category_images/', blank=True, null=True)
 
+    class Meta:
+        ordering = ['name']  # Сортировка по имени категории
+
     def __str__(self):
         return self.name
 
@@ -21,6 +24,9 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
     in_stock = models.BooleanField(default=True)
     currency = models.CharField(max_length=3, choices=CURRENCY_CHOICES, default='USD')
+
+    class Meta:
+        ordering = ['name']  # Сортировка по имени продукта
 
     def __str__(self):
         return f"{self.name} ({self.get_currency_display()})"

@@ -5,7 +5,7 @@ from .models import Recipients
 class RecipientsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Recipients
-        fields = ['id', 'user', 'event_type', 'relationship', 'gender', 'age_range']
+        fields = ['id', 'user', 'event_type', 'relationship', 'gender', 'age_range', 'price_range']
 
     def validate(self, attrs):
         # Проверка на обязательность полей

@@ -1,0 +1,1580 @@
+{
+  "categories": [
+    {
+      "name": "Игрушки",
+      "products": [
+        {
+          "name": "Мягкий мишка",
+          "description": "Плюшевый медведь 50 см",
+          "price": 25.0,
+          "in_stock": true
+        },
+        {
+          "name": "Конструктор LEGO",
+          "description": "Набор деталей для сборки",
+          "price": 45.0,
+          "in_stock": true
+        },
+        {
+          "name": "Деревянная железная дорога",
+          "description": "Игровой набор с поездами",
+          "price": 30.0,
+          "in_stock": true
+        },
+        {
+          "name": "Кукла Барби",
+          "description": "Кукла с аксессуарами",
+          "price": 20.0,
+          "in_stock": true
+        },
+        {
+          "name": "Машинка на радиоуправлении",
+          "description": "Быстрая гоночная машинка",
+          "price": 35.0,
+          "in_stock": true
+        },
+        {
+          "name": "Настольная игра 'Монополия'",
+          "description": "Классическая игра для семьи",
+          "price": 40.0,
+          "in_stock": true
+        },
+        {
+          "name": "Пазлы 1000 деталей",
+          "description": "Красивая картина в пазлах",
+          "price": 15.0,
+          "in_stock": true
+        },
+        {
+          "name": "Игровой набор доктора",
+          "description": "Детский медицинский набор",
+          "price": 18.0,
+          "in_stock": true
+        },
+        {
+          "name": "Игрушечная кухня",
+          "description": "Мини-кухня с посудой",
+          "price": 50.0,
+          "in_stock": true
+        },
+        {
+          "name": "Мяч футбольный",
+          "description": "Для активных игр",
+          "price": 12.0,
+          "in_stock": true
+        },
+        {
+          "name": "Юла музыкальная",
+          "description": "Свет и звук",
+          "price": 10.0,
+          "in_stock": true
+        },
+        {
+          "name": "Игрушечный робот",
+          "description": "Двигается и говорит",
+          "price": 40.0,
+          "in_stock": true
+        },
+        {
+          "name": "Кубик Рубика",
+          "description": "Классическая головоломка",
+          "price": 8.0,
+          "in_stock": true
+        },
+        {
+          "name": "Набор для лепки",
+          "description": "Цветной пластилин",
+          "price": 15.0,
+          "in_stock": true
+        },
+        {
+          "name": "Игрушечная железная дорога",
+          "description": "Электрический поезд",
+          "price": 60.0,
+          "in_stock": true
+        },
+        {
+          "name": "Дартс безопасный",
+          "description": "Мягкие дротики",
+          "price": 20.0,
+          "in_stock": true
+        },
+        {
+          "name": "Кукольный домик",
+          "description": "С мебелью",
+          "price": 75.0,
+          "in_stock": true
+        },
+        {
+          "name": "Игровой коврик",
+          "description": "С рисунками",
+          "price": 30.0,
+          "in_stock": true
+        },
+        {
+          "name": "Настольный хоккей",
+          "description": "Мини-игра",
+          "price": 50.0,
+          "in_stock": true
+        },
+        {
+          "name": "Баскетбольное кольцо",
+          "description": "Для дома",
+          "price": 25.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Книги",
+      "products": [
+        {
+          "name": "Сказки Пушкина",
+          "description": "Иллюстрированное издание",
+          "price": 10.0,
+          "in_stock": true
+        },
+        {
+          "name": "Гарри Поттер",
+          "description": "Полное собрание",
+          "price": 60.0,
+          "in_stock": true
+        },
+        {
+          "name": "Энциклопедия животных",
+          "description": "Для детей 6+",
+          "price": 20.0,
+          "in_stock": true
+        },
+        {
+          "name": "Кулинарная книга",
+          "description": "Рецепты со всего мира",
+          "price": 25.0,
+          "in_stock": true
+        },
+        {
+          "name": "Роман 'Анна Каренина'",
+          "description": "Классическая литература",
+          "price": 15.0,
+          "in_stock": true
+        },
+        {
+          "name": "Научная фантастика",
+          "description": "Сборник рассказов",
+          "price": 18.0,
+          "in_stock": true
+        },
+        {
+          "name": "Детективы Агаты Кристи",
+          "description": "Полное собрание",
+          "price": 50.0,
+          "in_stock": true
+        },
+        {
+          "name": "Развивающие книги",
+          "description": "Для малышей",
+          "price": 12.0,
+          "in_stock": true
+        },
+        {
+          "name": "Учебник по программированию",
+          "description": "Python для начинающих",
+          "price": 30.0,
+          "in_stock": true
+        },
+        {
+          "name": "Мировая история",
+          "description": "Иллюстрированная хроника",
+          "price": 35.0,
+          "in_stock": true
+        },
+        {
+          "name": "Поэзия Серебряного века",
+          "description": "Стихи и поэмы",
+          "price": 15.0,
+          "in_stock": true
+        },
+        {
+          "name": "Книга с наклейками",
+          "description": "Для самых маленьких",
+          "price": 8.0,
+          "in_stock": true
+        },
+        {
+          "name": "Сказки братьев Гримм",
+          "description": "Полное собрание",
+          "price": 12.0,
+          "in_stock": true
+        },
+        {
+          "name": "Руководство по садоводству",
+          "description": "Для дачников",
+          "price": 20.0,
+          "in_stock": true
+        },
+        {
+          "name": "Атлас мира",
+          "description": "С картами и фото",
+          "price": 25.0,
+          "in_stock": true
+        },
+        {
+          "name": "Книга по психологии",
+          "description": "Советы и методы",
+          "price": 18.0,
+          "in_stock": true
+        },
+        {
+          "name": "Фантастический роман",
+          "description": "Новый бестселлер",
+          "price": 22.0,
+          "in_stock": true
+        },
+        {
+          "name": "Книга для подростков",
+          "description": "Современная проза",
+          "price": 15.0,
+          "in_stock": true
+        },
+        {
+          "name": "Путеводитель",
+          "description": "По странам мира",
+          "price": 20.0,
+          "in_stock": true
+        },
+        {
+          "name": "Книга по медитации",
+          "description": "Практики и техники",
+          "price": 18.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Канцтовары",
+      "products": [
+        {
+          "name": "Набор гелевых ручек",
+          "description": "10 цветов",
+          "price": 8.0,
+          "in_stock": true
+        },
+        {
+          "name": "Дневник ученика",
+          "description": "Школьный формат",
+          "price": 5.0,
+          "in_stock": true
+        },
+        {
+          "name": "Цветные карандаши",
+          "description": "Набор из 24 штук",
+          "price": 10.0,
+          "in_stock": true
+        },
+        {
+          "name": "Ежедневник",
+          "description": "Для записи задач",
+          "price": 12.0,
+          "in_stock": true
+        },
+        {
+          "name": "Ластик фигурный",
+          "description": "Для детей",
+          "price": 2.0,
+          "in_stock": true
+        },
+        {
+          "name": "Линейка с рисунком",
+          "description": "30 см",
+          "price": 3.0,
+          "in_stock": true
+        },
+        {
+          "name": "Блокнот",
+          "description": "А5, 100 листов",
+          "price": 7.0,
+          "in_stock": true
+        },
+        {
+          "name": "Точилка для карандашей",
+          "description": "С контейнером",
+          "price": 4.0,
+          "in_stock": true
+        },
+        {
+          "name": "Папка для документов",
+          "description": "Формат А4",
+          "price": 6.0,
+          "in_stock": true
+        },
+        {
+          "name": "Фломастеры",
+          "description": "12 цветов",
+          "price": 9.0,
+          "in_stock": true
+        },
+        {
+          "name": "Клей-карандаш",
+          "description": "Для поделок",
+          "price": 2.5,
+          "in_stock": true
+        },
+        {
+          "name": "Ручка-перо",
+          "description": "Для каллиграфии",
+          "price": 15.0,
+          "in_stock": true
+        },
+        {
+          "name": "Тетради школьные",
+          "description": "Школьный формат",
+          "price": 15.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Поделки своими руками",
+      "products": [
+        {
+          "name": "Набор для вышивания",
+          "description": "Схемы и нитки",
+          "price": 12.0,
+          "in_stock": true
+        },
+        {
+          "name": "Набор для изготовления свечей",
+          "description": "Формы и воск",
+          "price": 15.0,
+          "in_stock": true
+        },
+        {
+          "name": "Набор для лепки",
+          "description": "Глина и инструменты",
+          "price": 10.0,
+          "in_stock": true
+        },
+        {
+          "name": "Набор для создания украшений",
+          "description": "Бусины и застёжки",
+          "price": 18.0,
+          "in_stock": true
+        },
+        {
+          "name": "Набор для декупажа",
+          "description": "Клей, салфетки",
+          "price": 14.0,
+          "in_stock": true
+        },
+        {
+          "name": "Набор для скрапбукинга",
+          "description": "Украшения и бумага",
+          "price": 20.0,
+          "in_stock": true
+        },
+        {
+          "name": "Набор для рисования",
+          "description": "Холст и краски",
+          "price": 25.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Парфюмерия",
+      "products": [
+        {
+          "name": "Туалетная вода для мужчин",
+          "description": "Древесный аромат",
+          "price": 45.0,
+          "in_stock": true
+        },
+        {
+          "name": "Парфюмерная вода для женщин",
+          "description": "Цветочный букет",
+          "price": 50.0,
+          "in_stock": true
+        },
+        {
+          "name": "Одеколон для мужчин",
+          "description": "Свежий цитрус",
+          "price": 30.0,
+          "in_stock": true
+        },
+        {
+          "name": "Духи для женщин",
+          "description": "Роскошный восток",
+          "price": 65.0,
+          "in_stock": true
+        },
+        {
+          "name": "Парфюмированный спрей",
+          "description": "Фруктовый аромат",
+          "price": 20.0,
+          "in_stock": true
+        },
+        {
+          "name": "Тестер духов для женщин",
+          "description": "Популярные бренды",
+          "price": 25.0,
+          "in_stock": true
+        },
+        {
+          "name": "Парфюмерный набор для мужчин",
+          "description": "Вода и дезодорант",
+          "price": 40.0,
+          "in_stock": true
+        },
+        {
+          "name": "Духи с феромонами",
+          "description": "Привлекательный аромат",
+          "price": 55.0,
+          "in_stock": true
+        },
+        {
+          "name": "Нишевые духи",
+          "description": "Уникальные композиции",
+          "price": 80.0,
+          "in_stock": true
+        },
+        {
+          "name": "Туалетная вода для женщин",
+          "description": "Легкий аромат",
+          "price": 35.0,
+          "in_stock": true
+        },
+        {
+          "name": "Парфюмерное масло",
+          "description": "Интенсивный аромат",
+          "price": 50.0,
+          "in_stock": true
+        },
+        {
+          "name": "Детская туалетная вода",
+          "description": "Легкий и нежный",
+          "price": 15.0,
+          "in_stock": true
+        },
+        {
+          "name": "Подарочный набор парфюмерии",
+          "description": "Для любого возраста",
+          "price": 60.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Бижутерия",
+      "products": [
+        {
+          "name": "Серьги-гвоздики",
+          "description": "Со стразами",
+          "price": 10.0,
+          "in_stock": true
+        },
+        {
+          "name": "Колье",
+          "description": "С жемчугом",
+          "price": 25.0,
+          "in_stock": true
+        },
+        {
+          "name": "Браслет",
+          "description": "Кожаный",
+          "price": 15.0,
+          "in_stock": true
+        },
+        {
+          "name": "Брошь",
+          "description": "Металлическая с эмалью",
+          "price": 12.0,
+          "in_stock": true
+        },
+        {
+          "name": "Подвеска",
+          "description": "С кристаллом",
+          "price": 20.0,
+          "in_stock": true
+        },
+        {
+          "name": "Цепочка",
+          "description": "Серебристая",
+          "price": 18.0,
+          "in_stock": true
+        },
+        {
+          "name": "Кольцо",
+          "description": "Регулируемый размер",
+          "price": 14.0,
+          "in_stock": true
+        },
+        {
+          "name": "Серьги-кольца",
+          "description": "Большие",
+          "price": 22.0,
+          "in_stock": true
+        },
+        {
+          "name": "Браслет-шамбала",
+          "description": "С бусинами",
+          "price": 8.0,
+          "in_stock": true
+        },
+        {
+          "name": "Заколка для волос",
+          "description": "С декором",
+          "price": 6.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Посуда",
+      "products": [
+        {
+          "name": "Набор чашек",
+          "description": "Керамика, 6 штук",
+          "price": 30.0,
+          "in_stock": true
+        },
+        {
+          "name": "Тарелки обеденные",
+          "description": "Фарфор, 6 штук",
+          "price": 50.0,
+          "in_stock": true
+        },
+        {
+          "name": "Стеклянный кувшин",
+          "description": "1.5 литра",
+          "price": 15.0,
+          "in_stock": true
+        },
+        {
+          "name": "Сковорода с антипригарным покрытием",
+          "description": "Диаметр 28 см",
+          "price": 25.0,
+          "in_stock": true
+        },
+        {
+          "name": "Кастрюля",
+          "description": "Нержавеющая сталь, 3 л",
+          "price": 40.0,
+          "in_stock": true
+        },
+        {
+          "name": "Чайник для заваривания",
+          "description": "Стеклянный, с фильтром",
+          "price": 20.0,
+          "in_stock": true
+        },
+        {
+          "name": "Набор бокалов",
+          "description": "Для вина, 6 штук",
+          "price": 45.0,
+          "in_stock": true
+        },
+        {
+          "name": "Столовые приборы",
+          "description": "Набор на 6 персон",
+          "price": 35.0,
+          "in_stock": true
+        },
+        {
+          "name": "Термос",
+          "description": "1 литр, стальной",
+          "price": 20.0,
+          "in_stock": true
+        },
+        {
+          "name": "Миска для салатов",
+          "description": "Керамическая",
+          "price": 12.0,
+          "in_stock": true
+        },
+        {
+          "name": "Набор кружек",
+          "description": "С рисунком, 4 штуки",
+          "price": 25.0,
+          "in_stock": true
+        },
+        {
+          "name": "Сахарница",
+          "description": "С ложечкой",
+          "price": 10.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Бытовые электротовары",
+      "products": [
+        {
+          "name": "Электрический чайник",
+          "description": "1.7 литра",
+          "price": 35.0,
+          "in_stock": true
+        },
+        {
+          "name": "Миксер ручной",
+          "description": "5 скоростей",
+          "price": 40.0,
+          "in_stock": true
+        },
+        {
+          "name": "Блендер",
+          "description": "Погружной, 600 Вт",
+          "price": 50.0,
+          "in_stock": true
+        },
+        {
+          "name": "Мультиварка",
+          "description": "5 программ",
+          "price": 80.0,
+          "in_stock": true
+        },
+        {
+          "name": "Микроволновая печь",
+          "description": "20 литров",
+          "price": 120.0,
+          "in_stock": true
+        },
+        {
+          "name": "Тостер",
+          "description": "На 2 ломтика",
+          "price": 25.0,
+          "in_stock": true
+        },
+        {
+          "name": "Электрическая мясорубка",
+          "description": "С насадками",
+          "price": 90.0,
+          "in_stock": true
+        },
+        {
+          "name": "Утюг",
+          "description": "С пароувлажнением",
+          "price": 60.0,
+          "in_stock": true
+        },
+        {
+          "name": "Фен для волос",
+          "description": "Складной",
+          "price": 30.0,
+          "in_stock": true
+        },
+        {
+          "name": "Пылесос",
+          "description": "С мешком для пыли",
+          "price": 150.0,
+          "in_stock": true
+        },
+        {
+          "name": "Очиститель воздуха",
+          "description": "Фильтр HEPA",
+          "price": 120.0,
+          "in_stock": true
+        },
+        {
+          "name": "Электрогриль",
+          "description": "Для дома",
+          "price": 100.0,
+          "in_stock": true
+        },
+        {
+          "name": "Тепловентилятор",
+          "description": "Компактный",
+          "price": 40.0,
+          "in_stock": true
+        },
+        {
+          "name": "Лампа настольная",
+          "description": "Светодиодная",
+          "price": 25.0,
+          "in_stock": true
+        },
+        {
+          "name": "Видеоняня",
+          "description": "С камерой",
+          "price": 150.0,
+          "in_stock": true
+        },
+        {
+          "name": "Электрический штопор",
+          "description": "Для вина",
+          "price": 35.0,
+          "in_stock": true
+        },
+        {
+          "name": "Портативный вентилятор",
+          "description": "Компактный",
+          "price": 20.0,
+          "in_stock": true
+        },
+        {
+          "name": "Увлажнитель воздуха",
+          "description": "Ультразвуковой",
+          "price": 80.0,
+          "in_stock": true
+        },
+        {
+          "name": "Фритюрница",
+          "description": "3 литра",
+          "price": 70.0,
+          "in_stock": true
+        },
+        {
+          "name": "Электрическая бритва",
+          "description": "С зарядкой",
+          "price": 60.0,
+          "in_stock": true
+        },
+        {
+          "name": "Робот-пылесос",
+          "description": "С функцией влажной уборки",
+          "price": 200.0,
+          "in_stock": true
+        },
+        {
+          "name": "Кофеварка",
+          "description": "Эспрессо",
+          "price": 90.0,
+          "in_stock": true
+        },
+        {
+          "name": "Термопот",
+          "description": "3 литра",
+          "price": 75.0,
+          "in_stock": true
+        },
+        {
+          "name": "Электронные весы",
+          "description": "Кухонные",
+          "price": 25.0,
+          "in_stock": true
+        },
+        {
+          "name": "Электрическая зубная щетка",
+          "description": "С 3 режимами",
+          "price": 50.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Фототовары",
+      "products": [
+        {
+          "name": "Фотоальбом",
+          "description": "На 200 фото",
+          "price": 15.0,
+          "in_stock": true
+        },
+        {
+          "name": "Чашка с фото",
+          "description": "Керамическая, персональная",
+          "price": 10.0,
+          "in_stock": true
+        },
+        {
+          "name": "Фоторамка",
+          "description": "Деревянная, А4",
+          "price": 12.0,
+          "in_stock": true
+        },
+        {
+          "name": "Подушка с фото",
+          "description": "40x40 см",
+          "price": 20.0,
+          "in_stock": true
+        },
+        {
+          "name": "Футболка с фото",
+          "description": "Любое изображение",
+          "price": 25.0,
+          "in_stock": true
+        },
+        {
+          "name": "Магнит с фото",
+          "description": "На холодильник",
+          "price": 5.0,
+          "in_stock": true
+        },
+        {
+          "name": "Календарь с фото",
+          "description": "На стену, А3",
+          "price": 18.0,
+          "in_stock": true
+        },
+        {
+          "name": "Брелок с фото",
+          "description": "Персональный",
+          "price": 8.0,
+          "in_stock": true
+        },
+        {
+          "name": "Фотокнига",
+          "description": "Печать изображений",
+          "price": 40.0,
+          "in_stock": true
+        },
+        {
+          "name": "Светильник с фото",
+          "description": "Персональная гравировка",
+          "price": 35.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Мобильные устройства",
+      "products": [
+        {
+          "name": "Смартфон Samsung",
+          "description": "Galaxy A14, 128 ГБ",
+          "price": 250.0,
+          "in_stock": true
+        },
+        {
+          "name": "Смартфон iPhone",
+          "description": "14 Pro, 256 ГБ",
+          "price": 1200.0,
+          "in_stock": true
+        },
+        {
+          "name": "Планшет iPad",
+          "description": "10.2 дюйма, WiFi",
+          "price": 400.0,
+          "in_stock": true
+        },
+        {
+          "name": "Смартфон Xiaomi",
+          "description": "Redmi Note 12",
+          "price": 220.0,
+          "in_stock": true
+        },
+        {
+          "name": "Смартфон Google Pixel",
+          "description": "7, 128 ГБ",
+          "price": 650.0,
+          "in_stock": true
+        },
+        {
+          "name": "Планшет Samsung",
+          "description": "Galaxy Tab S7",
+          "price": 500.0,
+          "in_stock": true
+        },
+        {
+          "name": "Смартфон OPPO",
+          "description": "Reno 8, 256 ГБ",
+          "price": 320.0,
+          "in_stock": true
+        },
+        {
+          "name": "Смартфон Vivo",
+          "description": "V23, 128 ГБ",
+          "price": 300.0,
+          "in_stock": true
+        },
+        {
+          "name": "Смартфон Realme",
+          "description": "GT Neo, 256 ГБ",
+          "price": 280.0,
+          "in_stock": true
+        },
+        {
+          "name": "Планшет Lenovo",
+          "description": "Tab M10",
+          "price": 200.0,
+          "in_stock": true
+        },
+        {
+          "name": "Гибкий смартфон Huawei",
+          "description": "Mate X2",
+          "price": 1800.0,
+          "in_stock": true
+        },
+        {
+          "name": "Планшет Microsoft",
+          "description": "Surface Pro",
+          "price": 1000.0,
+          "in_stock": true
+        },
+        {
+          "name": "Смартфон Sony",
+          "description": "Xperia 1 IV",
+          "price": 900.0,
+          "in_stock": true
+        },
+        {
+          "name": "Гибкий смартфон Samsung",
+          "description": "Galaxy Z Fold",
+          "price": 1800.0,
+          "in_stock": true
+        },
+        {
+          "name": "Смартфон Honor",
+          "description": "Magic 4 Pro",
+          "price": 700.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Подарочные сертификаты",
+      "products": [
+        {
+          "name": "Сертификат в салон красоты",
+          "description": "Стрижка и уход",
+          "price": 50.0,
+          "in_stock": true
+        },
+        {
+          "name": "Сертификат в автосервис",
+          "description": "Диагностика и ремонт",
+          "price": 100.0,
+          "in_stock": true
+        },
+        {
+          "name": "Сертификат в магазин \"Все для дома\"",
+          "description": "Универсальный",
+          "price": 30.0,
+          "in_stock": true
+        },
+        {
+          "name": "Сертификат в детский игровой центр",
+          "description": "Игры и аттракционы",
+          "price": 40.0,
+          "in_stock": true
+        },
+        {
+          "name": "Сертификат в СПА-салон",
+          "description": "Массаж и процедуры",
+          "price": 80.0,
+          "in_stock": true
+        },
+        {
+          "name": "Сертификат в книжный магазин",
+          "description": "На любую литературу",
+          "price": 20.0,
+          "in_stock": true
+        },
+        {
+          "name": "Сертификат на курсы",
+          "description": "Языки или программирование",
+          "price": 150.0,
+          "in_stock": true
+        },
+        {
+          "name": "Сертификат в ресторан",
+          "description": "Ужин на двоих",
+          "price": 70.0,
+          "in_stock": true
+        },
+        {
+          "name": "Сертификат на мастер-класс",
+          "description": "Гончарство или кулинария",
+          "price": 60.0,
+          "in_stock": true
+        },
+        {
+          "name": "Сертификат в магазин одежды",
+          "description": "На любую сумму",
+          "price": 100.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Спорттовары",
+      "products": [
+        {
+          "name": "Фитнес-резинки",
+          "description": "Набор из 5 штук",
+          "price": 20.0,
+          "in_stock": true
+        },
+        {
+          "name": "Гантели",
+          "description": "Набор 2x5 кг",
+          "price": 50.0,
+          "in_stock": true
+        },
+        {
+          "name": "Коврик для йоги",
+          "description": "Антискользящий",
+          "price": 30.0,
+          "in_stock": true
+        },
+        {
+          "name": "Боксерские перчатки",
+          "description": "Профессиональные",
+          "price": 40.0,
+          "in_stock": true
+        },
+        {
+          "name": "Ролики",
+          "description": "Для активного отдыха",
+          "price": 80.0,
+          "in_stock": true
+        },
+        {
+          "name": "Скакалка",
+          "description": "Для кардио тренировок",
+          "price": 15.0,
+          "in_stock": true
+        },
+        {
+          "name": "Велотренажер",
+          "description": "Компактный, для дома",
+          "price": 200.0,
+          "in_stock": true
+        },
+        {
+          "name": "Турник",
+          "description": "Для установки дома",
+          "price": 60.0,
+          "in_stock": true
+        },
+        {
+          "name": "Мяч футбольный",
+          "description": "Стандартный размер",
+          "price": 25.0,
+          "in_stock": true
+        },
+        {
+          "name": "Гимнастический обруч",
+          "description": "Облегченный",
+          "price": 10.0,
+          "in_stock": true
+        },
+        {
+          "name": "Палки для скандинавской ходьбы",
+          "description": "Регулируемая длина",
+          "price": 35.0,
+          "in_stock": true
+        },
+        {
+          "name": "Лыжи",
+          "description": "Для горного катания",
+          "price": 150.0,
+          "in_stock": true
+        },
+        {
+          "name": "Капа боксерская",
+          "description": "Для защиты зубов",
+          "price": 12.0,
+          "in_stock": true
+        },
+        {
+          "name": "Штанга с блинами",
+          "description": "Комплект 50 кг",
+          "price": 180.0,
+          "in_stock": true
+        },
+        {
+          "name": "Теннисная ракетка",
+          "description": "Для большого тенниса",
+          "price": 75.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Аксессуары для дома",
+      "products": [
+        {
+          "name": "Плед",
+          "description": "Флисовый, 150x200 см",
+          "price": 30.0,
+          "in_stock": true
+        },
+        {
+          "name": "Скатерть",
+          "description": "На обеденный стол",
+          "price": 25.0,
+          "in_stock": true
+        },
+        {
+          "name": "Полотенца",
+          "description": "Набор из 5 штук",
+          "price": 20.0,
+          "in_stock": true
+        },
+        {
+          "name": "Ваза",
+          "description": "Керамическая, высокая",
+          "price": 35.0,
+          "in_stock": true
+        },
+        {
+          "name": "Настенные часы",
+          "description": "С крупными цифрами",
+          "price": 40.0,
+          "in_stock": true
+        },
+        {
+          "name": "Подушки декоративные",
+          "description": "Набор из 2 штук",
+          "price": 30.0,
+          "in_stock": true
+        },
+        {
+          "name": "Зеркало",
+          "description": "С подсветкой",
+          "price": 50.0,
+          "in_stock": true
+        },
+        {
+          "name": "Органайзер",
+          "description": "Для хранения вещей",
+          "price": 15.0,
+          "in_stock": true
+        },
+        {
+          "name": "Коврик для ванной",
+          "description": "Противоскользящий",
+          "price": 18.0,
+          "in_stock": true
+        },
+        {
+          "name": "Ароматическая свеча",
+          "description": "С запахом лаванды",
+          "price": 12.0,
+          "in_stock": true
+        },
+        {
+          "name": "Покрывало",
+          "description": "На двуспальную кровать",
+          "price": 40.0,
+          "in_stock": true
+        },
+        {
+          "name": "Штора для душа",
+          "description": "С рисунком",
+          "price": 22.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Часы",
+      "products": [
+        {
+          "name": "Настенные часы",
+          "description": "Классический стиль",
+          "price": 50.0,
+          "in_stock": true
+        },
+        {
+          "name": "Ручные часы",
+          "description": "Мужские, кожаный ремешок",
+          "price": 120.0,
+          "in_stock": true
+        },
+        {
+          "name": "Электронные часы",
+          "description": "С будильником",
+          "price": 25.0,
+          "in_stock": true
+        },
+        {
+          "name": "Напольные часы",
+          "description": "С боем",
+          "price": 500.0,
+          "in_stock": true
+        },
+        {
+          "name": "Детские часы",
+          "description": "С мультяшным дизайном",
+          "price": 15.0,
+          "in_stock": true
+        },
+        {
+          "name": "Спортивные часы",
+          "description": "С шагомером",
+          "price": 80.0,
+          "in_stock": true
+        },
+        {
+          "name": "Настольные часы",
+          "description": "С ретро-дизайном",
+          "price": 35.0,
+          "in_stock": true
+        },
+        {
+          "name": "Механические часы",
+          "description": "Ручной завод",
+          "price": 150.0,
+          "in_stock": true
+        },
+        {
+          "name": "Умные часы",
+          "description": "С фитнес-трекером",
+          "price": 200.0,
+          "in_stock": true
+        },
+        {
+          "name": "Часы-браслет",
+          "description": "Женские, с кристаллами",
+          "price": 50.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Искусство",
+      "products": [
+        {
+          "name": "Картина маслом",
+          "description": "Пейзаж, 50x70 см",
+          "price": 150.0,
+          "in_stock": true
+        },
+        {
+          "name": "Скульптура",
+          "description": "Мраморная, 30 см",
+          "price": 200.0,
+          "in_stock": true
+        },
+        {
+          "name": "Статуэтка",
+          "description": "Керамическая, современный стиль",
+          "price": 50.0,
+          "in_stock": true
+        },
+        {
+          "name": "Шкатулка",
+          "description": "Резная, деревянная",
+          "price": 40.0,
+          "in_stock": true
+        },
+        {
+          "name": "Музыкальная шкатулка",
+          "description": "С мелодией",
+          "price": 60.0,
+          "in_stock": true
+        },
+        {
+          "name": "Акварельная картина",
+          "description": "Абстракция",
+          "price": 100.0,
+          "in_stock": true
+        },
+        {
+          "name": "Гобелен",
+          "description": "Старинный узор",
+          "price": 120.0,
+          "in_stock": true
+        },
+        {
+          "name": "Холст с печатью",
+          "description": "Фотографический принт",
+          "price": 70.0,
+          "in_stock": true
+        },
+        {
+          "name": "Керамическая ваза",
+          "description": "Ручная роспись",
+          "price": 90.0,
+          "in_stock": true
+        },
+        {
+          "name": "Книга об искусстве",
+          "description": "История мирового искусства",
+          "price": 30.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Романтика",
+      "products": [
+        {
+          "name": "Ужин для двоих",
+          "description": "Романтический вечер",
+          "price": 100.0,
+          "in_stock": true
+        },
+        {
+          "name": "Поход в кино",
+          "description": "Билеты на двоих",
+          "price": 20.0,
+          "in_stock": true
+        },
+        {
+          "name": "Поход в театр",
+          "description": "Премьера спектакля",
+          "price": 50.0,
+          "in_stock": true
+        },
+        {
+          "name": "Прогулка на лошадях",
+          "description": "Часовая прогулка",
+          "price": 70.0,
+          "in_stock": true
+        },
+        {
+          "name": "Спа-день для двоих",
+          "description": "Расслабляющие процедуры",
+          "price": 150.0,
+          "in_stock": true
+        },
+        {
+          "name": "Свидание на крыше",
+          "description": "Ужин с видом на город",
+          "price": 120.0,
+          "in_stock": true
+        },
+        {
+          "name": "Ночной полет на воздушном шаре",
+          "description": "Под звездами",
+          "price": 200.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Туризм",
+      "products": [
+        {
+          "name": "Круиз на лайнере",
+          "description": "3 дня по реке",
+          "price": 500.0,
+          "in_stock": true
+        },
+        {
+          "name": "Поездка на природу",
+          "description": "С гидом",
+          "price": 100.0,
+          "in_stock": true
+        },
+        {
+          "name": "Экскурсия по городу",
+          "description": "На автобусе",
+          "price": 50.0,
+          "in_stock": true
+        },
+        {
+          "name": "Путевка в санаторий",
+          "description": "На неделю",
+          "price": 700.0,
+          "in_stock": true
+        },
+        {
+          "name": "Тур по замкам",
+          "description": "2 дня",
+          "price": 300.0,
+          "in_stock": true
+        },
+        {
+          "name": "Поход в горы",
+          "description": "С ночевкой",
+          "price": 200.0,
+          "in_stock": true
+        },
+        {
+          "name": "Рыбалка на озере",
+          "description": "С арендой лодки",
+          "price": 150.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Сладости",
+      "products": [
+        {
+          "name": "Корзина сладостей",
+          "description": "Шоколад и конфеты",
+          "price": 50.0,
+          "in_stock": true
+        },
+        {
+          "name": "Ручной шоколад",
+          "description": "С орехами",
+          "price": 20.0,
+          "in_stock": true
+        },
+        {
+          "name": "Выпечка от шеф-повара",
+          "description": "Эклеры и торты",
+          "price": 30.0,
+          "in_stock": true
+        },
+        {
+          "name": "Печенье с предсказаниями",
+          "description": "На счастье",
+          "price": 15.0,
+          "in_stock": true
+        },
+        {
+          "name": "Конфеты ручной работы",
+          "description": "Ассорти",
+          "price": 25.0,
+          "in_stock": true
+        },
+        {
+          "name": "Мармелад",
+          "description": "Фруктовый",
+          "price": 10.0,
+          "in_stock": true
+        },
+        {
+          "name": "Набор шоколадных фигурок",
+          "description": "Подарочный дизайн",
+          "price": 35.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Эмоции",
+      "products": [
+        {
+          "name": "Прыжок с парашютом",
+          "description": "Для экстремалов",
+          "price": 300.0,
+          "in_stock": true
+        },
+        {
+          "name": "Квест",
+          "description": "Для компании",
+          "price": 80.0,
+          "in_stock": true
+        },
+        {
+          "name": "Полет в аэротрубе",
+          "description": "5 минут",
+          "price": 150.0,
+          "in_stock": true
+        },
+        {
+          "name": "Мастер-класс по кулинарии",
+          "description": "С профессионалом",
+          "price": 100.0,
+          "in_stock": true
+        },
+        {
+          "name": "Урок танцев",
+          "description": "Для двоих",
+          "price": 70.0,
+          "in_stock": true
+        },
+        {
+          "name": "Тренинг личностного роста",
+          "description": "На один день",
+          "price": 120.0,
+          "in_stock": true
+        },
+        {
+          "name": "Полет на вертолете",
+          "description": "Над городом",
+          "price": 500.0,
+          "in_stock": true
+        },
+        {
+          "name": "Катание на сноуборде",
+          "description": "С инструктором",
+          "price": 200.0,
+          "in_stock": true
+        },
+        {
+          "name": "Роупджампинг",
+          "description": "Прыжок с моста",
+          "price": 250.0,
+          "in_stock": true
+        },
+        {
+          "name": "Фотосессия",
+          "description": "Профессиональная съемка",
+          "price": 180.0,
+          "in_stock": true
+        }
+      ]
+    },
+    {
+      "name": "Цветы",
+      "products": [
+        {
+          "name": "Букет роз",
+          "description": "15 красных роз",
+          "price": 50.0,
+          "in_stock": true
+        },
+        {
+          "name": "Композиция в коробке",
+          "description": "Микс цветов",
+          "price": 70.0,
+          "in_stock": true
+        },
+        {
+          "name": "Орхидея в горшке",
+          "description": "Сорт Фаленопсис",
+          "price": 30.0,
+          "in_stock": true
+        },
+        {
+          "name": "Букет тюльпанов",
+          "description": "20 штук",
+          "price": 40.0,
+          "in_stock": true
+        },
+        {
+          "name": "Комнатный кактус",
+          "description": "С декоративным горшком",
+          "price": 15.0,
+          "in_stock": true
+        },
+        {
+          "name": "Герберы",
+          "description": "Яркий букет",
+          "price": 35.0,
+          "in_stock": true
+        },
+        {
+          "name": "Лилии",
+          "description": "Белые, 10 штук",
+          "price": 50.0,
+          "in_stock": true
+        },
+        {
+          "name": "Сухоцветы",
+          "description": "Композиция в вазе",
+          "price": 45.0,
+          "in_stock": true
+        },
+        {
+          "name": "Фикус в горшке",
+          "description": "Для дома",
+          "price": 25.0,
+          "in_stock": true
+        },
+        {
+          "name": "Цветы на 8 марта",
+          "description": "Подарочный букет",
+          "price": 60.0,
+          "in_stock": true
+        }
+      ]
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

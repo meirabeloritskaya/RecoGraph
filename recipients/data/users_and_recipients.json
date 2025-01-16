@@ -1,0 +1,244 @@
+{
+    "users": [
+        {
+            "email": "Alex@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "mother",
+                    "event_type": "birthday",
+                    "gender": "female",
+                    "age_range": "51-70"
+                }
+            ]
+        },
+        {
+            "email": "Nona@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "father",
+                    "event_type": "anniversary",
+                    "gender": "male",
+                    "age_range": "51-70"
+                }
+            ]
+        },
+        {
+            "email": "Serzh@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "wife",
+                    "event_type": "wedding",
+                    "gender": "female",
+                    "age_range": "26-50"
+                }
+            ]
+        },
+        {
+            "email": "Polina@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "husband",
+                    "event_type": "new_year",
+                    "gender": "male",
+                    "age_range": "26-50"
+                }
+            ]
+        },
+        {
+            "email": "Timur@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "daughter",
+                    "event_type": "women_day",
+                    "gender": "female",
+                    "age_range": "14-25"
+                }
+            ]
+        },
+        {
+            "email": "Alesia@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "son",
+                    "event_type": "birthday",
+                    "gender": "male",
+                    "age_range": "7-13"
+                }
+            ]
+        },
+        {
+            "email": "Sasha@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "sister",
+                    "event_type": "birthday",
+                    "gender": "female",
+                    "age_range": "0-6"
+                }
+            ]
+        },
+        {
+            "email": "Mary@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "brother",
+                    "event_type": "anniversary",
+                    "gender": "male",
+                    "age_range": "26-50"
+                }
+            ]
+        },
+        {
+            "email": "Goga@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "friend",
+                    "event_type": "new_year",
+                    "gender": "male",
+                    "age_range": "26-50"
+                }
+            ]
+        },
+        {
+            "email": "Musia@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "friend",
+                    "event_type": "new_year",
+                    "gender": "female",
+                    "age_range": "26-50"
+                }
+            ]
+        },
+        {
+            "email": "Max@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "grandmother",
+                    "event_type": "birthday",
+                    "gender": "female",
+                    "age_range": "71-120"
+                }
+            ]
+        },
+        {
+            "email": "Vova@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "grandfather",
+                    "event_type": "anniversary",
+                    "gender": "male",
+                    "age_range": "71-120"
+                }
+            ]
+        },
+        {
+            "email": "Lera@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "teacher",
+                    "event_type": "new_year",
+                    "gender": "female",
+                    "age_range": "26-50"
+                }
+            ]
+        },
+        {
+            "email": "Kat@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "teacher",
+                    "event_type": "new_year",
+                    "gender": "male",
+                    "age_range": "26-50"
+                }
+            ]
+        },
+        {
+            "email": "Kola@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "colleague",
+                    "event_type": "birthday",
+                    "gender": "female",
+                    "age_range": "26-50"
+                }
+            ]
+        },
+        {
+            "email": "Pavel@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "colleague",
+                    "event_type": "birthday",
+                    "gender": "male",
+                    "age_range": "26-50"
+                }
+            ]
+        },
+        {
+            "email": "Vitaliy@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "wife",
+                    "event_type": "women_day",
+                    "gender": "female",
+                    "age_range": "26-50"
+                }
+            ]
+        },
+        {
+            "email": "Berta@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "husband",
+                    "event_type": "wedding",
+                    "gender": "male",
+                    "age_range": "26-50"
+                }
+            ]
+        },
+        {
+            "email": "Fuly@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "daughter",
+                    "event_type": "birthday",
+                    "gender": "female",
+                    "age_range": "7-13"
+                }
+            ]
+        },
+        {
+            "email": "Ester@example.com",
+            "password": "password123",
+            "recipients": [
+                {
+                    "relationship": "son",
+                    "event_type": "birthday",
+                    "gender": "male",
+                    "age_range": "14-25"
+                }
+            ]
+        }
+    ]
+}

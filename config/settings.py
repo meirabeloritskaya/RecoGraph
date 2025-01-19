@@ -33,7 +33,6 @@ INSTALLED_APPS = [
     'users',
     'recipients',
     'recommendations',
-    'analytics',
     'present',
 ]
 

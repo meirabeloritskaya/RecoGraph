@@ -19,10 +19,13 @@ class UserActionHandler:
             action=action
         )
 
-        if not created:
-            return Response({"message": f"Already marked as {action}"}, status=status.HTTP_200_OK)
+        response_data = {
+            "message": f"Successfully marked as {action}" if created else f"Already marked as {action}",
+            "product_name": self.product.name,
+            "price": f"{self.product.price} {self.product.get_currency_display()}"
+        }
 
-        return Response({"message": f"Successfully marked as {action}"}, status=status.HTTP_201_CREATED)
+        return Response(response_data, status=status.HTTP_201_CREATED if created else status.HTTP_200_OK)
 
 
 def add_to_favorites(user, product_id):

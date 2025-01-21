@@ -14,9 +14,9 @@ class Category(models.Model):
 
 class Product(models.Model):
     CURRENCY_CHOICES = [
-        ('USD', 'US Dollar ($)'),
-        ('EUR', 'Euro (€)'),
-        ('RUB', 'Russian Ruble (₽)'),
+        ('USD', '$'),  # Dollar
+        ('EUR', '€'),  # Euro
+        ('RUB', '₽'),  # Russian Ruble
     ]
 
     name = models.CharField(max_length=150)

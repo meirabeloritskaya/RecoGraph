@@ -46,19 +46,19 @@ class Recipients(models.Model):
         ('friend', 'Друг'),
         ('other', 'Другое'),
     ]
-    PRICE_RANGE = [
+    PRICE = [
         ('low', 'До 20$'),
         ('medium', '20$ - 50$'),
         ('high', '50$ - 100$'),
         ('premium', 'Более 100$'),
     ]
 
-    price_range = models.CharField(max_length=10, choices=PRICE_RANGE, blank=True, null=True, help_text="Желаемый диапазон цен для подарка")
-    user = models.ForeignKey('users.User', on_delete=models.CASCADE)  # Связь с пользователем
-    event_type = models.CharField(max_length=20, choices=EVENT_TYPES, default='birthday')
+    price = models.CharField(max_length=10, choices=PRICE, blank=True, null=True, help_text="Желаемый диапазон цен для подарка")
+    user = models.ForeignKey('users.User', on_delete=models.CASCADE, related_name='recipients')  # Связь с пользователем
+    event_type = models.CharField(max_length=20, choices=EVENT_TYPES, default='birthday', blank=True, null=True)
     relationship = models.CharField(max_length=20, blank=True, null=True)
-    gender = models.CharField(max_length=10, choices=GENDER_CHOICES)  # Пол обязателен
-    age_range = models.CharField(max_length=20, choices=AGE_RANGE_CHOICES)  # Диапазон возраста обязателен
+    gender = models.CharField(max_length=10, choices=GENDER_CHOICES, blank=False, null=False)  # Пол обязателен
+    age_range = models.CharField(max_length=20, choices=AGE_RANGE_CHOICES, blank=False, null=False)  # Диапазон возраста обязателен
 
     def __str__(self):
         return f"{self.user} - {self.event_type} ({self.relationship if self.relationship else 'Нет отношения'})"

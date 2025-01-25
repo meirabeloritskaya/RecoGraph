@@ -8,7 +8,7 @@ urlpatterns = [
     path('api/users/', include('users.urls')),
     path('api/recipients/', include('recipients.urls')),
     path('api/present/', include('present.urls')),
-    # path('api/recommendations/', include('recommendations.urls')),
+    path('api/recommendations/', include('recommendations.urls')),
     # path('api/analytics/', include('analytics.urls'))
 ]
 

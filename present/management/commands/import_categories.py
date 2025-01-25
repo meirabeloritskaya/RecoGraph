@@ -5,7 +5,7 @@ from present.models import Category, Product
 
 
 class Command(BaseCommand):
-    help = 'Import categories and products from JSON file'
+    help = 'Import products from JSON file'
 
     def handle(self, *args, **kwargs):
 

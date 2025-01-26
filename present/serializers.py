@@ -17,4 +17,4 @@ class ProductSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Product
-        fields = ['id', 'name', 'description', 'category', 'price', 'in_stock',  'currency',]
+        fields = ['id', 'category', 'name', 'gender', 'age_range', 'description', 'price',  'in_stock']

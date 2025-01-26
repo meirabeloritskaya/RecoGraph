@@ -62,13 +62,15 @@ class Product(models.Model):
 
     name = models.CharField(max_length=150)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products')
-    price = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
     in_stock = models.BooleanField(default=True)
-    currency = models.CharField(max_length=3, choices=CURRENCY_CHOICES, default='USD')
-    gender = models.CharField(max_length=10, choices=GENDER_CHOICES, default='unisex')
-    age_range = models.CharField(max_length=20, choices=AGE_RANGE_CHOICES, blank=True, null=True)
+    price = models.DecimalField(max_digits=15, decimal_places=2, blank=True, null=True)
+    price_range = models.CharField(max_length=25, blank=True, null=True)
+    currency = models.CharField(max_length=3, choices=CURRENCY_CHOICES, default='RUB')
+    gender = models.JSONField(default=list, blank=True)  # JSONField для хранения массивов
+    age_range = models.JSONField(default=list, blank=True)
     event_type = models.CharField(max_length=20, choices=EVENT_TYPES, blank=True, null=True)
     relationship = models.CharField(max_length=20, choices=RELATIONSHIPS, blank=True, null=True)
+    description = models.TextField(null=True, blank=True)
 
     class Meta:
         ordering = ['name']  # Сортировка по имени продукта

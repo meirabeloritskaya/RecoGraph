@@ -33,17 +33,20 @@ def build_graph():
         product_node = f"product_{interaction.product.id}"
 
         # Добавляем/обновляем узел продукта с нужными атрибутами
+        # Добавляем/обновляем узел продукта с нужными атрибутами
         G.add_node(
             product_node,
             type="product",
-            product=interaction.product,
-            # Ниже — пример, если у вас в модели Product есть такие поля
-            gender=getattr(interaction.product, "gender", None),
-            age_range=getattr(interaction.product, "age_range", None),
+            product_id=interaction.product.id,
+            name=interaction.product.name,
+            gender=interaction.product.gender,
+            age_range=interaction.product.age_range,
             event_type=getattr(interaction.product, "event_type", None),
             relationship=getattr(interaction.product, "relationship", None),
-            price=getattr(interaction.product, "price", None),
+            price=interaction.product.price,
+            price_range=interaction.product.price_range,
         )
+
         print(f"Added/updated product node: {product_node}, attributes: {interaction.product}")
 
         # Для каждого получателя, принадлежащего этому пользователю
@@ -56,8 +59,12 @@ def build_graph():
         weight = ACTION_WEIGHTS[interaction.action]
         for rec in user_recipients:
             recipient_node = f"recipient_{rec.id}"
-            G.add_edge(recipient_node, product_node, weight=weight)
-            print(f"Added edge: {recipient_node} -> {product_node}, weight: {weight}")
+
+            if rec.gender in interaction.product.gender or "male" in interaction.product.gender and "female" in interaction.product.gender:
+                G.add_edge(recipient_node, product_node, weight=weight)
+                print(f"Added edge: {recipient_node} -> {product_node}, weight: {weight}")
+            else:
+                print(f"Skipping product {product_node} for recipient {recipient_node}: gender mismatch")
 
     return G
 

@@ -1,0 +1,84 @@
+{
+    "users": [
+        {
+            "email": "Alex@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Nona@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Serzh@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Polina@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Timur@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Alesia@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Sasha@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Mary@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Goga@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Musia@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Max@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Vova@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Lera@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Kat@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Kola@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Pavel@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Vitaliy@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Berta@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Fuly@example.com",
+            "password": "password123"
+        },
+        {
+            "email": "Ester@example.com",
+            "password": "password123"
+        }
+    ]
+}

@@ -36,7 +36,7 @@ class Recipients(models.Model):
         ('friend', 'Подруга/Друг'),
         ('other', 'Другое'),
     ]
-    PRICE = [
+    PRICE_RANGE = [
         ('100-1500', '100-1500 руб.'),
         ('1501-5000', '1501-5000 руб.'),
         ('5001-10000', '5001-10000 руб.'),
@@ -45,7 +45,7 @@ class Recipients(models.Model):
         ('100001-200000', '100001-200000 руб.'),
     ]
 
-    price = models.CharField(max_length=25, choices=PRICE, blank=True, null=True, help_text="Желаемый диапазон цен для подарка")
+    price_range = models.CharField(max_length=25, choices=PRICE_RANGE, blank=True, null=True, help_text="Желаемый диапазон цен для подарка")
     user = models.ForeignKey('users.User', on_delete=models.CASCADE, related_name='recipients')  # Связь с пользователем
     event_type = models.CharField(max_length=20, choices=EVENT_TYPES, default='birthday', blank=True, null=True)
     relationship = models.CharField(max_length=20, choices=RELATIONSHIPS, blank=True, null=True)

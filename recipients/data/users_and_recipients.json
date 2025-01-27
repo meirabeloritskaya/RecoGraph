@@ -9,7 +9,7 @@
                     "event_type": "birthday",
                     "gender": "female",
                     "age_range": "51-70",
-                    "price": "50001-100000"
+                    "price_range": "50001-100000"
                 }
             ]
         },
@@ -22,7 +22,7 @@
                     "event_type": "anniversary",
                     "gender": "male",
                     "age_range": "51-70",
-                    "price": "50001-100000"
+                    "price_range": "50001-100000"
                 }
             ]
         },
@@ -35,7 +35,7 @@
                     "event_type": "wedding",
                     "gender": "female",
                     "age_range": "26-50",
-                    "price": "100001-200000"
+                    "price_range": "100001-200000"
                 }
             ]
         },
@@ -48,7 +48,7 @@
                     "event_type": "new_year",
                     "gender": "male",
                     "age_range": "26-50",
-                    "price": "100001-200000"
+                    "price_range": "100001-200000"
                 }
             ]
         },
@@ -61,7 +61,7 @@
                     "event_type": "women_day",
                     "gender": "female",
                     "age_range": "14-25",
-                    "price": "5001-10000"
+                    "price_range": "5001-10000"
                 }
             ]
         },
@@ -74,7 +74,7 @@
                     "event_type": "birthday",
                     "gender": "male",
                     "age_range": "7-13",
-                    "price": "1501-5000"
+                    "price_range": "1501-5000"
                 }
             ]
         },
@@ -87,7 +87,7 @@
                     "event_type": "birthday",
                     "gender": "female",
                     "age_range": "0-6",
-                    "price": "1501-5000"
+                    "price_range": "1501-5000"
                 }
             ]
         },
@@ -100,7 +100,7 @@
                     "event_type": "anniversary",
                     "gender": "male",
                     "age_range": "26-50",
-                    "price": "10001-50000"
+                    "price_range": "10001-50000"
                 }
             ]
         },
@@ -113,7 +113,7 @@
                     "event_type": "new_year",
                     "gender": "male",
                     "age_range": "26-50",
-                    "price": "10001-50000"
+                    "price_range": "10001-50000"
                 }
             ]
         },
@@ -126,7 +126,7 @@
                     "event_type": "new_year",
                     "gender": "female",
                     "age_range": "26-50",
-                    "price": "10001-50000"
+                    "price_range": "10001-50000"
                 }
             ]
         },
@@ -139,7 +139,7 @@
                     "event_type": "birthday",
                     "gender": "female",
                     "age_range": "71-120",
-                    "price": "10001-50000"
+                    "price_range": "10001-50000"
                 }
             ]
         },
@@ -152,7 +152,7 @@
                     "event_type": "anniversary",
                     "gender": "male",
                     "age_range": "71-120",
-                    "price": "10001-50000"
+                    "price_range": "10001-50000"
                 }
             ]
         },
@@ -165,7 +165,7 @@
                     "event_type": "new_year",
                     "gender": "female",
                     "age_range": "26-50",
-                    "price": "10001-50000"
+                    "price_range": "10001-50000"
                 }
             ]
         },
@@ -178,7 +178,7 @@
                     "event_type": "new_year",
                     "gender": "male",
                     "age_range": "26-50",
-                    "price": "10001-50000"
+                    "price_range": "10001-50000"
                 }
             ]
         },
@@ -191,7 +191,7 @@
                     "event_type": "birthday",
                     "gender": "female",
                     "age_range": "26-50",
-                    "price": "10001-50000"
+                    "price_range": "10001-50000"
                 }
             ]
         },
@@ -204,7 +204,7 @@
                     "event_type": "birthday",
                     "gender": "male",
                     "age_range": "26-50",
-                    "price": "10001-50000"
+                    "price_range": "10001-50000"
                 }
             ]
         },
@@ -217,7 +217,7 @@
                     "event_type": "women_day",
                     "gender": "female",
                     "age_range": "26-50",
-                    "price": "50001-100000"
+                    "price_range": "50001-100000"
                 }
             ]
         },
@@ -230,7 +230,7 @@
                     "event_type": "wedding",
                     "gender": "male",
                     "age_range": "26-50",
-                    "price": "50001-100000"
+                    "price_range": "50001-100000"
                 }
             ]
         },
@@ -243,7 +243,7 @@
                     "event_type": "birthday",
                     "gender": "female",
                     "age_range": "7-13",
-                    "price": "1501-5000"
+                    "price_range": "1501-5000"
                 }
             ]
         },
@@ -256,7 +256,7 @@
                     "event_type": "birthday",
                     "gender": "male",
                     "age_range": "14-25",
-                    "price": "1501-5000"
+                    "price_range": "1501-5000"
                 }
             ]
         }

@@ -33,7 +33,7 @@ class Command(BaseCommand):
                             event_type=recipient_data['event_type'],
                             gender=recipient_data['gender'],
                             age_range=recipient_data['age_range'],
-                            price=recipient_data['price']
+                            price=recipient_data['price_range']
                         )
                         if rec_created:
                             self.stdout.write(f"Recipient for user '{user.email}' created.")

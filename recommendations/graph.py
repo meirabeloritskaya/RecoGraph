@@ -19,8 +19,18 @@ def build_graph():
         print(f"Added user node: {user_node}, type: user")
 
         # Добавляем узел получателя
-        G.add_node(recipient_node, type="recipient")
-        print(f"Added recipient node: {recipient_node}, type: recipient")
+        G.add_node(recipient_node,
+            type="recipient",
+            gender=recipient.gender,
+            age_range=recipient.age_range,
+            event_type=recipient.event_type,
+            relationship=recipient.relationship,
+            price_range=recipient.price_range,)
+
+        print(f"Added recipient node: {recipient_node}, attributes: {{"
+              f"'gender': {recipient.gender}, 'age_range': {recipient.age_range}, "
+              f"'event_type': {recipient.event_type}, 'relationship': {recipient.relationship}, "
+              f"'price_range': {recipient.price_range}}}")
 
         # Связь между пользователем и получателем (без веса или с весом=0)
         G.add_edge(user_node, recipient_node)
@@ -33,10 +43,10 @@ def build_graph():
         product_node = f"product_{interaction.product.id}"
 
         # Добавляем/обновляем узел продукта с нужными атрибутами
-        # Добавляем/обновляем узел продукта с нужными атрибутами
         G.add_node(
             product_node,
             type="product",
+            product=interaction.product,
             product_id=interaction.product.id,
             name=interaction.product.name,
             gender=interaction.product.gender,

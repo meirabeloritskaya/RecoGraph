@@ -126,6 +126,10 @@ class RecommendationEngine:
 
         # Возврат топ-N продуктов
         return [
-            self.graph.nodes[f"product_{product_id}"].get('product')
+            {
+                "id": product_id,
+                "name": self.graph.nodes[f"product_{product_id}"].get("name"),
+                "price_range": self.graph.nodes[f"product_{product_id}"].get("price_range"),
+            }
             for product_id, _ in sorted_recommendations[:top_n]
         ]

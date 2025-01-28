@@ -18,6 +18,9 @@ djangorestframework-simplejwt = "^5.4.0"
 psycopg2 = "^2.9.10"
 python-dotenv = "^1.0.1"
 pillow = "^11.1.0"
+numpy = "^2.2.2"
+scipy = "^1.15.1"
+scikit-learn = "^1.6.1"
 
 
 [build-system]

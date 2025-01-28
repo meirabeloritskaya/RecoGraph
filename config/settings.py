@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'recipients',
     'recommendations',
     'present',
+    'analytics',
 ]
 
 MIDDLEWARE = [

@@ -1,4 +1,4 @@
-from recommendations.models import UserInteraction
+from recommendations.models import UserInteraction, Product
 from rest_framework import status
 from rest_framework.response import Response
 
@@ -7,20 +7,31 @@ class UserActionHandler:
     def __init__(self, user, product_id):
         self.user = user
         self.product_id = product_id
+        self.product = self.get_product()
+
+    def get_product(self):
+        try:
+            return Product.objects.get(id=self.product_id)
+        except Product.DoesNotExist:
+            return None
 
     def handle_action(self, action):
-        if not self.product_id:
-            return Response({"error": "Product ID is required"}, status=status.HTTP_400_BAD_REQUEST)
+        if not self.product:
+            return Response({"error": "Product not found"}, status=status.HTTP_404_NOT_FOUND)
 
-        # Создаём или находим взаимодействие
+        # Создаём или обновляем взаимодействие
         interaction, created = UserInteraction.objects.get_or_create(
             user=self.user,
             product_id=self.product_id,
-            action=action
+            defaults={'action': action}
         )
 
+        if not created and interaction.action != action:
+            interaction.action = action
+            interaction.save()
+
         response_data = {
-            "message": f"Successfully marked as {action}" if created else f"Already marked as {action}",
+            "message": f"Successfully marked as {action}" if created else f"Action updated to {action}",
             "product_name": self.product.name,
             "price": f"{self.product.price} {self.product.get_currency_display()}"
         }

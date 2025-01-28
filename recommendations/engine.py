@@ -3,6 +3,7 @@ import numpy as np
 from present.models import Product
 from recommendations.utils import build_interaction_matrix, calculate_user_similarity
 
+
 class RecommendationEngine:
     def __init__(self, user_id, graph):
         self.user_id = user_id
@@ -76,4 +77,31 @@ class RecommendationEngine:
         product_ids = [product for product, idx in product_index.items() if idx in top_product_indices]
 
         # Вернуть объекты продуктов
+        return [Product.objects.get(id=product_id) for product_id in product_ids]
+
+    def get_recommendations_with_pagerank(self, top_n=3):
+        """
+        Получить рекомендации на основе PageRank.
+        :param top_n: Количество рекомендаций.
+        :return: Список объектов Product.
+        """
+        # Извлечь все узлы типа 'product' и отсортировать их по PageRank
+        product_nodes = [
+            node for node, data in self.graph.nodes(data=True)
+            if data.get('type') == 'product'
+        ]
+
+        # Сортируем узлы продуктов по значению PageRank
+        sorted_products = sorted(
+            product_nodes,
+            key=lambda node: self.graph.nodes[node].get('pagerank', 0),
+            reverse=True
+        )
+
+        # Извлекаем ID продуктов
+        product_ids = [
+            self.graph.nodes[node]['product'].id for node in sorted_products[:top_n]
+        ]
+
+        # Возвращаем объекты продуктов
         return [Product.objects.get(id=product_id) for product_id in product_ids]

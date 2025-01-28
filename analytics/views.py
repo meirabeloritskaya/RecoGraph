@@ -5,9 +5,13 @@ from present.models import Product, Category
 from django.db.models import Count
 from django.contrib.auth import get_user_model
 from django.db.models import Q
+from .permissions import IsSuperUser
+from rest_framework.permissions import IsAuthenticated
 
 
 class TopProductsView(APIView):
+    permission_classes = [IsAuthenticated, IsSuperUser]
+
     def get(self, request):
         """
         Возвращает топ-5 продуктов по популярности (количество взаимодействий).
@@ -24,6 +28,8 @@ class TopProductsView(APIView):
 
 
 class UserActionsStatsView(APIView):
+    permission_classes = [IsAuthenticated, IsSuperUser]
+
     def get(self, request):
         """
         Возвращает распределение действий пользователей (просмотрено, куплено и т.д.).
@@ -38,6 +44,8 @@ class UserActionsStatsView(APIView):
 
 
 class SummaryAnalyticsView(APIView):
+    permission_classes = [IsAuthenticated, IsSuperUser]
+
     def get(self, request):
         try:
             # Проверяем данные

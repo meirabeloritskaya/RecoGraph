@@ -4,7 +4,7 @@ from rest_framework.generics import CreateAPIView
 from rest_framework.permissions import AllowAny
 from rest_framework_simplejwt.views import TokenObtainPairView
 from .serializers import MyTokenObtainPairSerializer, UserSerializer
-
+from django.views.generic import TemplateView
 
 User = get_user_model()
 
@@ -28,3 +28,6 @@ class UserCreateAPIView(CreateAPIView):
         user.set_password(user.password)
         user.save()
 
+
+class HomeView(TemplateView):
+    template_name = 'users/home.html'

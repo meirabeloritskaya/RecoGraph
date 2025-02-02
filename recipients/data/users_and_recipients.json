@@ -83,7 +83,7 @@
             "password": "password123",
             "recipients": [
                 {
-                    "relationship": "sister",
+                    "relationship": "daughter",
                     "event_type": "birthday",
                     "gender": "female",
                     "age_range": "0-6",
@@ -96,7 +96,7 @@
             "password": "password123",
             "recipients": [
                 {
-                    "relationship": "brother",
+                    "relationship": "son",
                     "event_type": "anniversary",
                     "gender": "male",
                     "age_range": "26-50",

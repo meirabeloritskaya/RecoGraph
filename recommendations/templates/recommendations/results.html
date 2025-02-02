@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Результаты рекомендаций{% endblock %}
+
+{% block content %}
+<main class="container py-5">
+    <h2 class="text-center mb-4">Результаты рекомендаций</h2>
+
+    <p class="text-center">
+        <strong>Выбранные параметры:</strong><br>
+        Пол: {{ gender }} | Возраст: {{ age_range }}
+    </p>
+
+    {% if error %}
+        <div class="alert alert-danger text-center">
+            {{ error }}
+        </div>
+    {% elif recommendations %}
+        <ul class="list-group mx-auto" style="max-width: 600px;">
+            {% for recommendation in recommendations %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span><strong>{{ recommendation.name }}</strong> — {{ recommendation.price }} {{ recommendation.currency }}</span>
+                    <a href="#" class="btn btn-sm btn-success">Подробнее</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="text-center">Рекомендации отсутствуют.</p>
+    {% endif %}
+</main>
+{% endblock %}

@@ -4,7 +4,9 @@ from present.models import Product
 
 
 class ProductAnalytics(models.Model):
-    product = models.OneToOneField(Product, on_delete=models.CASCADE, related_name="analytics")
+    product = models.OneToOneField(
+        Product, on_delete=models.CASCADE, related_name="analytics"
+    )
     views_count = models.PositiveIntegerField(default=0)
     favorites_count = models.PositiveIntegerField(default=0)
     purchases_count = models.PositiveIntegerField(default=0)

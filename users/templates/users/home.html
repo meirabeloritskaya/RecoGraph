@@ -13,8 +13,8 @@
         <div class="container d-flex justify-content-between align-items-center">
             <h1 class="text-warning m-0">RecoGraph</h1>
             <div>
-                <a href="#" class="btn btn-light btn-sm me-2">Регистрация</a>
-                <a href="#" class="btn btn-warning btn-sm">Вход</a>
+                <a href="{% url 'users:register' %}" class="btn btn-light btn-sm me-2">Регистрация</a>
+                <a href="{% url 'users:login' %}" class="btn btn-warning btn-sm">Вход</a>
             </div>
         </div>
     </header>
@@ -25,8 +25,8 @@
         <p class="fs-3 text-light mb-3">Мы поможем вам выбрать подарок для всех ваших родных, друзей и близких!</p>
         <img src="/static/users/images/2.gif" alt="Подарки" class="img-fluid w-50 h-auto" style="max-width: 500px;">
         <div class="d-flex justify-content-center gap-3">
-            <a href="#" class="btn btn-warning btn-lg">Регистрация</a>
-            <a href="#" class="btn btn-light btn-lg">Вход</a>
+            <a href="{% url 'users:register' %}" class="btn btn-warning btn-lg">Регистрация</a>
+            <a href="{% url 'users:login' %}" class="btn btn-light btn-lg">Вход</a>
         </div>
     </main>
 

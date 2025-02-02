@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Личный кабинет - RecoGraph{% endblock %}
+
+{% block content %}
+<main class="container py-5">
+    <h2 class="text-center mb-4">Введите критерии для поиска подарка!</h2>
+
+    {% if form.errors %}
+    <div class="alert alert-danger text-center">
+        <ul class="list-unstyled">
+            {% for field, errors in form.errors.items %}
+                {% for error in errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <form action="{% url 'recommendations:results' %}" method="post" class="mx-auto" style="max-width: 600px;">
+        {% csrf_token %}
+        <div class="mb-3 w-50 mx-auto">
+            <label for="gender" class="form-label">Пол *</label>
+            <select name="gender" id="gender" class="form-select" required>
+                <option value="" disabled selected>Выберите пол</option>
+                <option value="male">Мужской</option>
+                <option value="female">Женский</option>
+            </select>
+        </div>
+        <div class="mb-3 w-50 mx-auto">
+            <label for="age_range" class="form-label">Возраст *</label>
+            <select name="age_range" id="age_range" class="form-select" required>
+                <option value="" disabled selected>Выберите возраст</option>
+                <option value="0-6">0-6 лет</option>
+                <option value="7-13">7-13 лет</option>
+                <option value="14-25">14-25 лет</option>
+                <option value="26-50">26-50 лет</option>
+                <option value="51-70">51-70 лет</option>
+                <option value="71-120">71-120 лет</option>
+            </select>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-warning btn-lg d-block mx-auto">Что подарить?!</button>
+        </div>
+    </form>
+</main>
+{% endblock %}

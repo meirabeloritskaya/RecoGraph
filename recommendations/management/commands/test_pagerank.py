@@ -12,15 +12,15 @@ class Command(BaseCommand):
 
         self.stdout.write("\nPageRank scores calculated:\n")
         for node, data in graph.nodes(data=True):
-            pagerank = data.get('pagerank', 0)
+            pagerank = data.get("pagerank", 0)
             self.stdout.write(f"{node}: PageRank = {pagerank}")
 
         self.stdout.write("\nТестируем рекомендации на основе PageRank...\n")
         # Отбираем узлы продуктов
         product_nodes = [
-            (node, data['pagerank'])
+            (node, data["pagerank"])
             for node, data in graph.nodes(data=True)
-            if data.get('type') == 'product'
+            if data.get("type") == "product"
         ]
 
         # Сортируем продукты по PageRank
@@ -29,7 +29,7 @@ class Command(BaseCommand):
         # Берем топ-N продуктов
         top_n = 3
         top_products = [
-            Product.objects.get(id=int(node.split('_')[1]))
+            Product.objects.get(id=int(node.split("_")[1]))
             for node, _ in sorted_products[:top_n]
         ]
 

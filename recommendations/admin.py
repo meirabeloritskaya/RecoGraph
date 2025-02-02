@@ -4,6 +4,6 @@ from .models import UserInteraction
 
 @admin.register(UserInteraction)
 class UserInteractionAdmin(admin.ModelAdmin):
-    list_display = ('user', 'product',  'product_price', 'action', 'timestamp')
-    list_filter = ('action', 'timestamp')
-    search_fields = ('user__email', 'product__name')
+    list_display = ("user", "product", "product_price", "action", "timestamp")
+    list_filter = ("action", "timestamp")
+    search_fields = ("user__email", "product__name")

@@ -13,11 +13,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-POSTGRES_DB = os.getenv('POSTGRES_DB')
-POSTGRES_USER = os.getenv('POSTGRES_USER')
-POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD')
-POSTGRES_HOST = os.getenv('POSTGRES_HOST')
-POSTGRES_PORT = os.getenv('POSTGRES_PORT')
+POSTGRES_DB = os.getenv("POSTGRES_DB")
+POSTGRES_USER = os.getenv("POSTGRES_USER")
+POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
+POSTGRES_HOST = os.getenv("POSTGRES_HOST")
+POSTGRES_PORT = os.getenv("POSTGRES_PORT")
 
 
 INSTALLED_APPS = [
@@ -29,12 +29,12 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # "django-filters"
     "rest_framework_simplejwt",
-    'config',
-    'users',
-    'recipients',
-    'recommendations',
-    'present',
-    'analytics',
+    "config",
+    "users",
+    "recipients",
+    "recommendations",
+    "present",
+    "analytics",
 ]
 
 MIDDLEWARE = [
@@ -52,7 +52,7 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        'DIRS': [],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -69,13 +69,13 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': POSTGRES_DB,
-        'USER': POSTGRES_USER,
-        'PASSWORD': POSTGRES_PASSWORD,
-        'HOST': POSTGRES_HOST,
-        'PORT': POSTGRES_PORT,
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": POSTGRES_DB,
+        "USER": POSTGRES_USER,
+        "PASSWORD": POSTGRES_PASSWORD,
+        "HOST": POSTGRES_HOST,
+        "PORT": POSTGRES_PORT,
     }
 }
 
@@ -83,8 +83,13 @@ DATABASES = {
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework_simplejwt.authentication.JWTAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.TokenAuthentication",
     ),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
+    "DEFAULT_RENDERER_CLASSES": (  # Добавляем рендер JSON
+        "rest_framework.renderers.JSONRenderer",
+    ),
 }
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -102,6 +107,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # Закрытие браузера удаляет сессию
+SESSION_COOKIE_AGE = 86400  # Сессия только до закрытия браузера
+
 LANGUAGE_CODE = "en-us"
 
 TIME_ZONE = "UTC"
@@ -115,10 +123,12 @@ STATICFILES_DIRS = [
 ]
 STATIC_URL = "static/"
 
+LOGIN_REDIRECT_URL = "users:home_login"  # После входа
+LOGOUT_REDIRECT_URL = "users:home"  # После выхода
+LOGIN_URL = "users:login"  # Перенаправление на логин, если юзер не авторизован
 AUTH_USER_MODEL = "users.User"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")

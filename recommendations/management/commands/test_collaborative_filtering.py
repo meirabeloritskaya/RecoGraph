@@ -11,7 +11,9 @@ class Command(BaseCommand):
         top_n = 3  # Количество рекомендаций
         engine = RecommendationEngine(user_id, graph=build_graph())
 
-        print(f"Тестирование коллаборативной фильтрации для пользователя {user_id}, top_n={top_n}...\n")
+        print(
+            f"Тестирование коллаборативной фильтрации для пользователя {user_id}, top_n={top_n}...\n"
+        )
         recommendations = engine.collaborative_filtering(top_n=top_n)
 
         if recommendations:

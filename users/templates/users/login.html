@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Вход в аккаунт{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-warning text-center">Вход в RecoGraph</h2>
+
+    <form method="post" class="w-50 mx-auto bg-dark p-4 rounded">
+        {% csrf_token %}
+
+        <div class="mb-3 w-50 mx-auto position-relative">
+            <label for="id_username" class="form-label">Email</label>
+            <input type="text" name="username" id="id_username" class="form-control {% if form.username.errors %}is-invalid{% endif %}" value="{{ form.username.value|default:'' }}">
+            {% if form.username.errors %}
+                <div class="invalid-feedback">{{ form.username.errors|striptags }}</div>
+            {% endif %}
+        </div>
+
+        <div class="mb-3 w-50 mx-auto position-relative">
+            <label for="id_password" class="form-label">Пароль</label>
+            <input type="password" name="password" id="id_password" class="form-control {% if form.password.errors %}is-invalid{% endif %}">
+            {% if form.password.errors %}
+                <div class="invalid-feedback">{{ form.password.errors|striptags }}</div>
+            {% endif %}
+        </div>
+
+        <button type="submit" class="btn btn-warning w-50">Войти</button>
+    </form>
+
+    <!-- Блок ошибок формы -->
+    {% if form.errors %}
+    <div class="alert alert-danger mt-3 w-50 mx-auto">
+        <ul class="m-0">
+            {% for field, errors in form.errors.items %}
+                {% for error in errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <!-- Скрипт для глазика -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".toggle-password").forEach(function (button) {
+            button.addEventListener("click", function () {
+                let input = this.previousElementSibling;
+                let icon = this.querySelector("i");
+
+                if (input.type === "password") {
+                    input.type = "text";
+                    icon.classList.remove("bi-eye");
+                    icon.classList.add("bi-eye-slash");
+                } else {
+                    input.type = "password";
+                    icon.classList.remove("bi-eye-slash");
+                    icon.classList.add("bi-eye");
+                }
+            });
+        });
+    });
+    </script>
+</div>
+{% endblock %}

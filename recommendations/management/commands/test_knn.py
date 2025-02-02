@@ -20,7 +20,9 @@ class Command(BaseCommand):
         engine = RecommendationEngine(user_id, graph)
 
         # Тестируем k-NN рекомендации
-        self.stdout.write(f"Тестирование k-NN для пользователя {user_id}, k={k}, top_n={top_n}...\n")
+        self.stdout.write(
+            f"Тестирование k-NN для пользователя {user_id}, k={k}, top_n={top_n}...\n"
+        )
         recommendations = engine.get_recommendations_with_knn(k=k, top_n=top_n)
 
         # Вывод результатов

@@ -4,17 +4,23 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 # Веса действий пользователей
 ACTION_WEIGHTS = {
-    'view': 1,        # Просмотрено
-    'favorite': 2,    # Добавлено в избранное
-    'cart': 3,        # Добавлено в корзину
-    'buy': 4          # Куплено
+    "view": 1,  # Просмотрено
+    "favorite": 2,  # Добавлено в избранное
+    "cart": 3,  # Добавлено в корзину
+    "buy": 4,  # Куплено
 }
 
-def build_interaction_matrix():
+
+def build_interaction_matrix(filtered_product_ids=None):
     """
     Строит матрицу взаимодействий пользователей с продуктами.
     """
-    interactions = UserInteraction.objects.select_related('user', 'product')
+    interactions = UserInteraction.objects.select_related("user", "product")
+
+    # Если передан список ID товаров, оставляем только их
+    if filtered_product_ids is not None:
+        interactions = interactions.filter(product_id__in=filtered_product_ids)
+
     users = {interaction.user.id for interaction in interactions}
     products = {interaction.product.id for interaction in interactions}
 
@@ -51,5 +57,7 @@ def find_nearest_neighbors(user_id, user_index, similarity_matrix, k=5):
     similarities = similarity_matrix[user_idx]
 
     # Найти индексы топ-k самых похожих пользователей
-    similar_users = np.argsort(-similarities)[1:k + 1]  # Исключаем самого пользователя (сходство = 1)
+    similar_users = np.argsort(-similarities)[
+        1 : k + 1
+    ]  # Исключаем самого пользователя (сходство = 1)
     return [user for user, idx in user_index.items() if idx in similar_users]

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Избранные товары - RecoGraph{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h2 class="text-center text-warning mb-4">Избранные товары</h2>
+
+    {% if favorites %}
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for fav in favorites %}
+            <div class="col">
+                <div class="card h-100 shadow-lg">
+<!--                    <img src="{{ fav.product.image.url }}" class="card-img-top" alt="{{ fav.product.name }}">-->
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ fav.product.name }}</h5>
+                        <p class="fw-bold">{{ fav.product.price }} {{ fav.product.currency }}</p>
+                        <i class="bi bi-heart-fill fs-3 text-danger"></i>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-center">Вы еще не добавили товары в избранное.</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}{{ category.name }} - RecoGraph{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h2 class="text-center text-warning mb-4">{{ category.name }}</h2>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for product in products %}
+        <div class="col">
+            <div class="card h-100 shadow-lg">
+<!--                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">-->
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.description }}</p>
+                    <p class="fw-bold">{{ product.price }} {{ product.currency }}</p>
+                    <a href="#" class="btn btn-warning">Купить</a>
+                    <!-- Иконка сердечка -->
+                    <button class="favorite-btn position-absolute top-0 end-0 m-2 border-0 bg-transparent"
+                            data-product-id="{{ product.id }}">
+                        {% if product.is_favorite %}
+                            <i class="bi bi-heart-fill fs-3 text-danger"></i> <!-- Уже в избранном -->
+                        {% else %}
+                            <i class="bi bi-heart fs-3 text-warning"></i> <!-- Не в избранном -->
+                        {% endif %}
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-center">Товары в этой категории пока отсутствуют.</p>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".favorite-btn").forEach(button => {
+            button.addEventListener("click", function () {
+                let productId = this.dataset.productId;
+                let heartIcon = this.querySelector("i");
+
+                fetch(`/api/present/favorites/${productId}/toggle/`, {
+                    method: "POST",
+                    headers: {
+                        "X-CSRFToken": "{{ csrf_token }}",
+                        "Content-Type": "application/json"
+                    },
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === "added") {
+                        heartIcon.classList.remove("bi-heart", "text-warning");
+                        heartIcon.classList.add("bi-heart-fill", "text-danger");
+                    } else if (data.status === "removed") {
+                        heartIcon.classList.remove("bi-heart-fill", "text-danger");
+                        heartIcon.classList.add("bi-heart", "text-warning"); // Белое контурное
+                    }
+                })
+                .catch(error => console.error("Ошибка:", error));
+            });
+        });
+    });
+
+</script>
+
+{% endblock %}

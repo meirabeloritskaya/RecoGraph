@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Все товары - RecoGraph{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h2 class="text-center text-warning mb-4">Категории товаров</h2>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for category in categories %}
+        <div class="col">
+            <div class="card h-100 shadow-lg d-flex flex-column">
+                <div class="card-img-container" style="height: 200px; overflow: hidden;">
+                    <img src="{{ category.image.url }}" class="card-img-top w-100 h-100" style="object-fit: cover;" alt="{{ category.name }}">
+                </div>
+                <div class="card-body text-center d-flex flex-column justify-content-between">
+                    <h5 class="card-title">{{ category.name }}</h5>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="{% url 'present:category-detail' category.id %}" class="btn btn-warning">Перейти</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-center">Категории товаров пока отсутствуют.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

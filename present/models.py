@@ -1,9 +1,9 @@
 from django.db import models
-
+from django.conf import settings
 
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)
-    image = models.ImageField(upload_to="category_images/", blank=True, null=True)
+    image = models.ImageField(upload_to="categories/", blank=True, null=True)
 
     class Meta:
         ordering = ["name"]  # Сортировка по имени категории
@@ -72,3 +72,16 @@ class Product(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.get_currency_display()})"
+
+
+class Favorite(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    product = models.ForeignKey("Product", on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('user', 'product')
+
+    def __str__(self):
+        return f"Избранное: {self.user.username} → {self.product.name}"
+

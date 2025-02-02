@@ -19,7 +19,12 @@
 
         <div class="mb-3 w-50 mx-auto position-relative">
             <label for="id_password" class="form-label">Пароль</label>
-            <input type="password" name="password" id="id_password" class="form-control {% if form.password.errors %}is-invalid{% endif %}">
+            <div class="input-group">
+                <input type="password" name="password" id="id_password" class="form-control {% if form.password.errors %}is-invalid{% endif %}">
+                <button type="button" class="btn btn-outline-secondary toggle-password">
+                    <i class="bi bi-eye"></i>
+                </button>
+            </div>
             {% if form.password.errors %}
                 <div class="invalid-feedback">{{ form.password.errors|striptags }}</div>
             {% endif %}
@@ -40,37 +45,37 @@
         </ul>
     </div>
     {% endif %}
-
-    <!-- Скрипт для глазика -->
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll(".toggle-password").forEach(function (button) {
-            button.addEventListener("click", function () {
-                let input = this.previousElementSibling;
-                let icon = this.querySelector("i");
-
-                if (input.type === "password") {
-                    input.type = "text";
-                    icon.classList.remove("bi-eye");
-                    icon.classList.add("bi-eye-slash");
-                } else {
-                    input.type = "password";
-                    icon.classList.remove("bi-eye-slash");
-                    icon.classList.add("bi-eye");
-                }
-            });
-        });
-    });
-    </script>
 </div>
+
+<!-- Кнопка "Назад" -->
 <div class="text-center mt-4">
     <button class="btn btn-secondary" onclick="goBack()">⬅ Назад</button>
 </div>
 
+<!-- Скрипты -->
 <script>
-    function goBack() {
-        window.history.back();
-    }
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".toggle-password").forEach(function (button) {
+        button.addEventListener("click", function () {
+            let input = this.previousElementSibling;
+            let icon = this.querySelector("i");
+
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove("bi-eye");
+                icon.classList.add("bi-eye-slash");
+            } else {
+                input.type = "password";
+                icon.classList.remove("bi-eye-slash");
+                icon.classList.add("bi-eye");
+            }
+        });
+    });
+});
+
+function goBack() {
+    window.history.back();
+}
 </script>
 
 {% endblock %}

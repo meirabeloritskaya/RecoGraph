@@ -5,6 +5,7 @@ from recommendations.actions import (
     mark_as_viewed,
     mark_as_bought,
 )
+from django.core.cache import cache
 from rest_framework.response import Response
 from rest_framework import status
 from recommendations.services import get_combined_recommendations
@@ -46,7 +47,7 @@ class UserActionView(APIView):
 
 class RecommendationsView(APIView):
     """
-    API для получения объединенных рекомендаций через POST-запрос.
+    API для получения объединенных рекомендаций через POST-запрос с кэшированием.
     """
 
     permission_classes = [AllowAny]
@@ -58,8 +59,6 @@ class RecommendationsView(APIView):
             user_id = request.user.id
             gender = request.data.get("gender")
             age_range = request.data.get("age_range")
-            # event_type = request.data.get("event_type")
-            # relationship = request.data.get("relationship")
             top_n = request.data.get("top_n", 3)
             weights = request.data.get(
                 "weights", {"knn": 3, "collaborative": 2, "pagerank": 1}
@@ -71,13 +70,22 @@ class RecommendationsView(APIView):
                     status=status.HTTP_400_BAD_REQUEST,
                 )
 
-            # Генерация рекомендаций
+            # 🔹 Генерируем ключ для кэша
+            cache_key = f"recommendations:{user_id}:{gender}:{age_range}:{top_n}:{str(weights)}"
+
+            # 🔹 Проверяем, есть ли данные в кэше
+            cached_data = cache.get(cache_key)
+            if cached_data:
+                return Response(
+                    {"recommendations": cached_data, "cached": True},
+                    status=status.HTTP_200_OK,
+                )
+
+            # 🔹 Если данных нет в кэше, вызываем функцию рекомендаций
             recommendations = get_combined_recommendations(
                 user_id=user_id,
                 gender=gender,
                 age_range=age_range,
-                # event_type=event_type,
-                # relationship=relationship,
                 top_n=int(top_n),
                 weights=weights,
             )
@@ -87,7 +95,13 @@ class RecommendationsView(APIView):
                 {"id": product.id, "name": product.name} for product in recommendations
             ]
 
-            return Response(response_data, status=status.HTTP_200_OK)
+            # 🔹 Кэшируем результат на 1 час (3600 секунд)
+            cache.set(cache_key, response_data, timeout=3600)
+
+            return Response(
+                {"recommendations": response_data, "cached": False},
+                status=status.HTTP_200_OK,
+            )
 
         except ValueError:
             return Response(
@@ -101,8 +115,6 @@ class RecommendationsView(APIView):
                 {"error": f"Произошла ошибка: {str(e)}"},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
-
-
 class RecommendationResultsView(View):
     def post(self, request):
         # Получение данных из формы

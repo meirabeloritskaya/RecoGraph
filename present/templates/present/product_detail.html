@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}{{ product.name }} - Детали{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h2 class="text-warning text-center">{{ product.name }}</h2>
+
+    <div class="card shadow-lg mx-auto" style="max-width: 600px;">
+        <!-- <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}"> -->
+        <div class="card-body text-center">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="fw-bold">{{ product.price }} {{ product.currency }}</p>
+            <p><strong>Категория:</strong> {{ product.category }}</p>
+            <p><strong>Описание:</strong> {{ product.description }}</p>
+            <p><strong>Наличие:</strong> {% if product.in_stock %} В наличии {% else %} Нет в наличии {% endif %}</p>
+
+            <!-- Кнопка "Добавить в корзину" -->
+            <a href="#" class="btn btn-warning add-to-cart-btn" data-product-id="{{ product.id }}">Купить</a>
+
+            <!-- Кнопка "Назад" -->
+            <a href="javascript:history.back()" class="btn btn-outline-secondary">Назад</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelector(".add-to-cart-btn").addEventListener("click", function () {
+        let productId = this.dataset.productId;
+
+        fetch(`/present/cart/add/${productId}/`, {
+            method: "POST",
+            headers: {
+                "X-CSRFToken": "{{ csrf_token }}",
+                "Content-Type": "application/json"
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === "added") {
+                alert("Товар добавлен в корзину!");
+            }
+        })
+        .catch(error => console.error("Ошибка:", error));
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".add-to-cart-btn").forEach(button => {
+            button.addEventListener("click", function () {
+                let productId = this.dataset.productId;
+                let buttonElement = this; // Сохраняем кнопку, чтобы изменить её текст
+
+                fetch(`/present/cart/add/${productId}/`, {
+                    method: "POST",
+                    headers: {
+                        "X-CSRFToken": "{{ csrf_token }}",
+                        "Content-Type": "application/json"
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === "added") {
+                        buttonElement.innerText = "Добавлено в корзину ✅";
+                        buttonElement.classList.add("btn-success"); // Меняем цвет кнопки
+                    } else if (data.status === "already_in_cart") {
+                        buttonElement.innerText = "Уже в корзине 🛒";
+                        buttonElement.classList.add("btn-secondary");
+                    }
+                })
+                .catch(error => console.error("Ошибка:", error));
+            });
+        });
+    });
+</script>
+
+
+{% endblock %}

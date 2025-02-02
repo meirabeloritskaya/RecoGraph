@@ -5,4 +5,14 @@
 {% block content %}
 <h2 class="text-warning">Контакты</h2>
 <p>Свяжитесь с нами по email: support@recograph.com</p>
+<div class="text-center mt-4">
+    <button class="btn btn-secondary" onclick="goBack()">⬅ Назад</button>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
 {% endblock %}

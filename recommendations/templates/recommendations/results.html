@@ -20,7 +20,13 @@
             {% for recommendation in recommendations %}
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <span><strong>{{ recommendation.name }}</strong> — {{ recommendation.price }} {{ recommendation.currency }}</span>
-                    <a href="#" class="btn btn-sm btn-success">Подробнее</a>
+                    {% if recommendation.id %}
+                        <a href="{% url 'present:product-detail' recommendation.id %}" class="btn btn-primary">Подробнее</a>
+                    {% else %}
+                        <button class="btn btn-secondary disabled">Нет деталей</button>
+                    {% endif %}
+
+
                 </li>
             {% endfor %}
         </ul>
@@ -28,4 +34,14 @@
         <p class="text-center">Рекомендации отсутствуют.</p>
     {% endif %}
 </main>
+</script>
+<div class="text-center mt-4">
+    <button class="btn btn-secondary" onclick="goBack()">⬅ Назад</button>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 {% endblock %}

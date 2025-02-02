@@ -15,7 +15,56 @@
                     <h5 class="card-title">{{ product.name }}</h5>
                     <p class="card-text">{{ product.description }}</p>
                     <p class="fw-bold">{{ product.price }} {{ product.currency }}</p>
-                    <a href="#" class="btn btn-warning">Купить</a>
+                    <a href="#" class="btn btn-warning add-to-cart-btn" data-product-id="{{ product.id }}">Купить</a>
+                    <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        document.querySelectorAll(".add-to-cart-btn").forEach(button => {
+                            button.addEventListener("click", function (event) {
+                                event.preventDefault();
+
+                                let productId = this.dataset.productId;
+                                let originalText = this.innerHTML;  // Запоминаем оригинальный текст кнопки
+                                let btn = this;
+
+                                // Визуальный эффект нажатия (увеличение)
+                                btn.style.transform = "scale(0.95)";
+                                btn.style.transition = "transform 0.1s ease";
+
+                                fetch(`/present/cart/add/${productId}/`, {
+                                    method: "POST",
+                                    headers: {
+                                        "X-CSRFToken": "{{ csrf_token }}",
+                                        "Content-Type": "application/json"
+                                    }
+                                })
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.status === "added") {
+                                        // Изменяем текст кнопки
+                                        btn.innerHTML = "Добавлено!";
+                                        btn.classList.remove("btn-warning");
+                                        btn.classList.add("btn-dark"); // Меняем цвет на тёмный
+
+                                        // Через 1.5 секунды возвращаем кнопку в исходное состояние
+                                        setTimeout(() => {
+                                            btn.innerHTML = originalText;
+                                            btn.classList.remove("btn-dark");
+                                            btn.classList.add("btn-warning");
+                                        }, 1500);
+                                    }
+                                })
+                                .catch(error => console.error("Ошибка:", error))
+                                .finally(() => {
+                                    // Убираем эффект нажатия
+                                    setTimeout(() => {
+                                        btn.style.transform = "scale(1)";
+                                    }, 100);
+                                });
+                            });
+                        });
+                    });
+
+                    </script>
                     <!-- Иконка сердечка -->
                     <button class="favorite-btn position-absolute top-0 end-0 m-2 border-0 bg-transparent"
                             data-product-id="{{ product.id }}">
@@ -63,6 +112,15 @@
         });
     });
 
+</script>
+<div class="text-center mt-4">
+    <button class="btn btn-secondary" onclick="goBack()">⬅ Назад</button>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
 </script>
 
 {% endblock %}

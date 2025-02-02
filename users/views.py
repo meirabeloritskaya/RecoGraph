@@ -3,7 +3,7 @@ from rest_framework import viewsets
 from rest_framework.generics import CreateAPIView
 from rest_framework.permissions import AllowAny
 from rest_framework_simplejwt.views import TokenObtainPairView
-from .serializers import MyTokenObtainPairSerializer, UserSerializer
+from users.serializers import MyTokenObtainPairSerializer, UserSerializer
 from django.views.generic import TemplateView, CreateView
 from django.urls import reverse_lazy
 from users.forms import CustomUserCreationForm
@@ -78,18 +78,6 @@ class UserLoginView(LoginView):
         if request.user.is_authenticated:  # Проверяем, успешно ли вошел пользователь
             request.session.set_expiry(0)  # Сессия сбрасывается при выходе
         return response
-
-
-class CartView(TemplateView):
-    template_name = "users/cart.html"  # Страница корзины
-
-
-class FavoritesView(TemplateView):
-    template_name = "users/favorites.html"  # Страница избранного
-
-
-class ViewsView(TemplateView):
-    template_name = "users/views.html"  # Страница просмотренных товаров
 
 
 class ContactView(TemplateView):

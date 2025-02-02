@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Аналитика - RecoGraph{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h2 class="text-center text-warning mb-4">Аналитика</h2>
+    <p class="text-center">Добро пожаловать, {{ user.email }}!</p>
+
+    <div id="analytics-container" class="text-center">
+        <h4>Общая статистика</h4>
+        <p>👥 Количество пользователей: <strong id="total-users">Загрузка...</strong></p>
+        <p>🎁 Количество товаров: <strong id="total-products">Загрузка...</strong></p>
+
+        <h4>📌 Топ-3 категории</h4>
+        <ul id="top-categories">Загрузка...</ul>
+
+        <h4>🔥 Топ-3 популярных продуктов</h4>
+        <ul id="top-products">Загрузка...</ul>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    fetchAnalyticsData();
+});
+
+function fetchAnalyticsData() {
+    const token = localStorage.getItem("access_token"); // Получаем токен из localStorage
+
+    fetch("/api/analytics/summary/", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            ...(token ? { "Authorization": `Bearer ${token}` } : {}) // Если токен есть, добавляем в headers
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            document.getElementById("analytics-container").innerHTML = `<p class="text-danger">${data.error}</p>`;
+            return;
+        }
+
+        // Заполняем раздел с аналитикой
+        document.getElementById("total-users").textContent = data.total_users || 0;
+        document.getElementById("total-products").textContent = data.total_products || 0;
+
+        // Отображаем ТОП-3 категорий
+        let categoriesHtml = data.top_categories.length ? "" : "<p>Нет данных</p>";
+        data.top_categories.forEach(category => {
+            categoriesHtml += `<li>${category.name} (${category.interaction_count} взаимодействий)</li>`;
+        });
+        document.getElementById("top-categories").innerHTML = categoriesHtml;
+
+        // Отображаем ТОП-3 продуктов
+        let productsHtml = data.most_popular_products.length ? "" : "<p>Нет данных</p>";
+        data.most_popular_products.forEach(product => {
+            productsHtml += `<li>${product.name} (${product.interaction_count} взаимодействий)</li>`;
+        });
+        document.getElementById("top-products").innerHTML = productsHtml;
+    })
+    .catch(error => {
+        console.error("Ошибка загрузки аналитики:", error);
+        document.getElementById("analytics-container").innerHTML = `<p class="text-danger">Ошибка загрузки данных.</p>`;
+    });
+}
+</script>
+
+{% endblock %}

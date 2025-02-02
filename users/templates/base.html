@@ -15,11 +15,13 @@
         <h1 class="text-warning m-0">RecoGraph</h1>
         <div class="d-flex gap-3">
             {% if user.is_authenticated %}
+                {% if user.is_authenticated and user.email == "admin@example.com" %}
+                    <a href="{% url 'analytics:analytics-dashboard' %}" class="btn btn-light btn-sm">Аналитика</a>
+                {% endif %}
                 <a href="{% url 'present:all-products' %}" class="btn btn-light btn-sm">Все товары</a>
-                <a href="{% url 'users:cart' %}" class="btn btn-light btn-sm">Корзина</a>
+                <a href="{% url 'present:cart' %}" class="btn btn-light btn-sm">Корзина</a>
                 <a href="{% url 'present:favorites-list' %}" class="btn btn-light btn-sm">Фавориты</a>
-                <a href="{% url 'users:views' %}" class="btn btn-light btn-sm">Мои просмотры</a>
-
+                <a href="{% url 'users:home_login' %}" class="btn btn-light btn-sm">Рекомендации</a>
                 <!-- Кнопка выхода (POST-запрос) -->
                 <form action="{% url 'users:logout' %}" method="post" class="d-inline">
                     {% csrf_token %}

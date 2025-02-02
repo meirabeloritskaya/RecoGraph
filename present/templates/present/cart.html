@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Корзина - RecoGraph{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h2 class="text-center text-warning mb-4">Корзина</h2>
+
+    {% if cart_items %}
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for item in cart_items %}
+            <div class="col">
+                <div class="card h-100 shadow-lg">
+                    <img src="{{ item.product.image.url }}" class="card-img-top" alt="{{ item.product.name }}">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ item.product.name }}</h5>
+                        <p class="fw-bold">{{ item.product.price }} {{ item.product.currency }}</p>
+                        <p>Количество: {{ item.quantity }}</p>
+
+                        <!-- Кнопка удаления -->
+                        <button class="btn btn-danger remove-from-cart-btn" data-product-id="{{ item.product.id }}">
+                            Удалить
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-center">Ваша корзина пуста.</p>
+    {% endif %}
+</div>
+
+<!-- ✅ JavaScript ВНЕ ЦИКЛА (один раз, не повторяется в каждой карточке) -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".remove-from-cart-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            let productId = this.dataset.productId;
+            console.log("Удаление товара:", productId); // Проверяем, читается ли ID
+
+            fetch(`/present/cart/remove/${productId}/`, {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": "{{ csrf_token }}",
+                    "Content-Type": "application/json"
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "removed") {
+                    location.reload(); // Обновление страницы после удаления
+                }
+            })
+            .catch(error => console.error("Ошибка удаления:", error));
+        });
+    });
+});
+</script>
+<div class="text-center mt-4">
+    <button class="btn btn-secondary" onclick="goBack()">⬅ Назад</button>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+{% endblock %}

@@ -7,6 +7,10 @@ from django.contrib.auth import get_user_model
 from django.db.models import Q
 from .permissions import IsSuperUser
 from rest_framework.permissions import IsAuthenticated
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views import View
+from django.http import HttpResponseForbidden
+from django.shortcuts import render
 
 
 class TopProductsView(APIView):
@@ -99,3 +103,13 @@ class SummaryAnalyticsView(APIView):
         except Exception as e:
             # Возвращаем информацию об ошибке
             return Response({"error": str(e)}, status=500)
+
+
+class AnalyticsView(LoginRequiredMixin, View):
+    """Страница аналитики доступна только admin@example.com"""
+
+    def get(self, request):
+        if request.user.email != "admin@example.com":
+            return HttpResponseForbidden("У вас нет доступа к этой странице.")
+
+        return render(request, "analytics/dashboard.html")  # Шаблон страницы аналитики
